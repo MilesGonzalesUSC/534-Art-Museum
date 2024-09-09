@@ -11,12 +11,15 @@ public class MagnifyIcon : MonoBehaviour
     public float DistanceToAppear;
     public AudioClip Huh;
 
+
+    private bool ClipRun;
     private AudioSource PlayerAudio;
 
     // Start is called before the first frame update
     void Start()
     {
         PlayerAudio = Player.GetComponent<AudioSource>();
+        ClipRun = false;
     }
 
     // Update is called once per frame
@@ -25,8 +28,11 @@ public class MagnifyIcon : MonoBehaviour
         //make the magnifying glass appear
         if(DistanceToAppear >= Vector3.Distance(transform.position,Player.transform.position)) {
             gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
-            PlayerAudio.clip = Huh;
-            PlayerAudio.Play();
+            if(!ClipRun) {
+                PlayerAudio.clip = Huh;
+                PlayerAudio.Play();
+                ClipRun = true;
+            }
             //rotate the magnifying glass
             if(FacePlayerBool) {
                 Quaternion targetRotation = Quaternion.LookRotation( Player.transform.position - transform.position );
@@ -35,6 +41,7 @@ public class MagnifyIcon : MonoBehaviour
             }
         } else if(DistanceToAppear <= Vector3.Distance( transform.position, Player.transform.position )){
             gameObject.transform.GetChild( 0 ).gameObject.SetActive( false );
+            ClipRun = false;
         }
     }
 }
