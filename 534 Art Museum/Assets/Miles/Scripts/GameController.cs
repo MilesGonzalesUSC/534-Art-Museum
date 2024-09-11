@@ -9,16 +9,19 @@ public class GameController : MonoBehaviour
     public GameObject OverlayPanel;
     public GameObject ControlsMenu;
 
+    [SerializeField]
+    public bool InMenu;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        InMenu = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-		if(Input.GetKeyDown( KeyCode.Escape )) {
+		if(Input.GetKeyDown( KeyCode.Escape ) && !InMenu) {
 			if(ControlsMenu.activeSelf) {
                 ControlsMenu.SetActive( false );
 			} else if(!ControlsMenu.activeSelf) {
