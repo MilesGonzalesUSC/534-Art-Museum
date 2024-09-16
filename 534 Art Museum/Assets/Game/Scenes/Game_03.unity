@@ -37609,8 +37609,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: FPSPlayer
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2519791352859736458, guid: 7b09d71254e1eef4e807ab9671855d22, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
