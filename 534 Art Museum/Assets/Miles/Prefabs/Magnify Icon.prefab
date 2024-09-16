@@ -222,3 +222,6 @@ MonoBehaviour:
   FacePlayerBool: 1
   Player: {fileID: 0}
   DistanceToAppear: 4
+  Huh: {fileID: 8300000, guid: 51ba52570bd2b4443af8b1a115870181, type: 3}
+  InteractCanvas: {fileID: 0}
+  GC: {fileID: 0}
