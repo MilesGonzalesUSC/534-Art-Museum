@@ -2877,6 +2877,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Checklist
       objectReference: {fileID: 0}
+    - target: {fileID: 3461880025966637687, guid: ebc4f6e713118bf4d9952009b821c9d3, type: 3}
+      propertyPath: Task_text
+      value: Change Text
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
